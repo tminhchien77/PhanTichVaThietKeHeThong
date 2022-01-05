@@ -1,0 +1,218 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C49ADE19-6476-4E06-9EE8-DBB07806D0B7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PTTKHTTT</RootNamespace>
+    <AssemblyName>PTTKHTTT</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v19.2" />
+    <Reference Include="DevExpress.Data.v19.2" />
+    <Reference Include="DevExpress.Utils.v19.2" />
+    <Reference Include="DevExpress.Sparkline.v19.2.Core" />
+    <Reference Include="DevExpress.XtraBars.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v19.2" />
+    <Reference Include="DevExpress.Printing.v19.2.Core" />
+    <Reference Include="DevExpress.XtraGrid.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\FormAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FormAdmin.designer.cs">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UCExamDetailsAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\UCExamDetailsAdmin.designer.cs">
+      <DependentUpon>UCExamDetailsAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UCRegisExamAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\UCRegisExamAdmin.designer.cs">
+      <DependentUpon>UCRegisExamAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EncryptPassword.cs" />
+    <Compile Include="KiemTraHSDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KiemTraHSDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SP_ChonBaiKiemTra.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SP_ChonBaiKiemTra.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Student\DeKiemTra.cs" />
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Student\FormChonBaiKiemTra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\FormChonBaiKiemTra.Designer.cs">
+      <DependentUpon>FormChonBaiKiemTra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Student\FormKiemTra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student\FormKiemTra.Designer.cs">
+      <DependentUpon>FormKiemTra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemConstant.cs" />
+    <Compile Include="Teacher\FormTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Teacher\FormTeacher.designer.cs">
+      <DependentUpon>FormTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\UCExamDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Teacher\UCExamDetails.designer.cs">
+      <DependentUpon>UCExamDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\UCQues.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Teacher\UCQues.designer.cs">
+      <DependentUpon>UCQues.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\UCRegisExam.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Teacher\UCRegisExam.designer.cs">
+      <DependentUpon>UCRegisExam.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Admin\FormAdmin.resx">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\UCExamDetailsAdmin.resx">
+      <DependentUpon>UCExamDetailsAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\UCRegisExamAdmin.resx">
+      <DependentUpon>UCRegisExamAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Student\FormChonBaiKiemTra.resx">
+      <DependentUpon>FormChonBaiKiemTra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Student\FormKiemTra.resx">
+      <DependentUpon>FormKiemTra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher\FormTeacher.resx">
+      <DependentUpon>FormTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher\UCExamDetails.resx">
+      <DependentUpon>UCExamDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher\UCQues.resx">
+      <DependentUpon>UCQues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Teacher\UCRegisExam.resx">
+      <DependentUpon>UCRegisExam.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="KiemTraHSDataSet.xsc">
+      <DependentUpon>KiemTraHSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="KiemTraHSDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KiemTraHSDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="KiemTraHSDataSet.xss">
+      <DependentUpon>KiemTraHSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SP_ChonBaiKiemTra.xsc">
+      <DependentUpon>SP_ChonBaiKiemTra.xsd</DependentUpon>
+    </None>
+    <None Include="SP_ChonBaiKiemTra.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SP_ChonBaiKiemTra.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SP_ChonBaiKiemTra.xss">
+      <DependentUpon>SP_ChonBaiKiemTra.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="img\admin.png" />
+    <Content Include="img\registered.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
